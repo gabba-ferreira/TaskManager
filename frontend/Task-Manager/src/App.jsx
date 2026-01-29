@@ -5,7 +5,6 @@ import {
   Route,
 } from 'react-router-dom'
 
-import PrivateRoute from './pages/Routes/PrivateRoute';
 
 import Login from './pages/Auth/Login';
 import SingUp from './pages/Auth/SingUp';
@@ -19,6 +18,7 @@ import UserDashboard from './pages/User/UserDashboard';
 import MyTask from './pages/User/MyTask';
 import ViewTaskDetails from './pages/User/ViewTaskDetails';
 
+import PrivateRoute from './routes/PrivateRoute';
 
 const App = () => {
   return (
