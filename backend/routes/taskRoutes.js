@@ -1,6 +1,6 @@
 const express = require("express");
 const {protect, adminOnly} = require("../middlewares/authMiddleware");
-const {getTasks,getTasksById,createTask} = require("../controllers/taskController")
+const {getTasks,getTasksById,createTask,updateTask,deleteTask} = require("../controllers/taskController")
 
 const router = express.Router();
 
@@ -9,8 +9,8 @@ const router = express.Router();
 router.get("/", protect, getTasks);
 router.get("/:id", protect, getTasksById);
 router.post("/", protect, createTask);
-// router.put("/:id", protect, updateTask);
-// router.delete("/:id", protect, adminOnly, deleteTask);
+router.put("/:id", protect, updateTask);
+router.delete("/:id", protect, adminOnly, deleteTask);
 // router.put("/:id/status", protect, updateTaskStatus);
 // router.put("/:id/todo", protect, updateTaskChecklist);
 
