@@ -7,7 +7,7 @@ import {
 
 
 import Login from './pages/Auth/Login';
-import SingUp from './pages/Auth/SingUp';
+import SignUp  from './pages/Auth/SignUp';
 
 import Dashboard from './pages/Admin/Dashboard';
 import ManageTasks from './pages/Admin/ManageTask';
@@ -25,7 +25,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/singUp" element={<SingUp />}></Route>
+        <Route path="/signup" element={<SignUp  />}></Route>
 
         {/* Admin Routes */}
         <Route element={<PrivateRoute allowedRoles={["admin"]}/>}>
